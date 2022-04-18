@@ -14,7 +14,7 @@ pipeline {
         sh 'npm i'
       }
     }
-    stage('Run tests') {
+    stage('Run start and shutdown after 2 minutes') {
       steps {
         sh 'npm start'
       }
