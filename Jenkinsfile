@@ -5,7 +5,7 @@ pipeline {
   }
 
   options {
-    timeout(time: 4, unit: 'MINUTES')
+    timeout(time: 2, unit: 'MINUTES')
   }
 
   stages {
@@ -14,9 +14,9 @@ pipeline {
         sh 'npm i'
       }
     }
-    stage('Run start and shutdown after 4 minutes') {
+    stage('Run test') {
       steps {
-        sh 'npm start'
+        sh 'npm test'
       }
     }
   }
